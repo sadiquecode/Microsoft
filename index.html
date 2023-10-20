@@ -48,7 +48,7 @@
 
     <!-- 1st Modal -->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header justify-content-between align-items-center d-flex header_modal">
@@ -121,7 +121,7 @@
 
     <!-- 2nd modal  -->
 
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog my-0 mx-auto">
             <div class="modal-content bg-primary">
                 <div class="modal-header border-0 justify-content-center py-2">
@@ -161,7 +161,7 @@
     <!-- Button trigger modal -->
     <!-- 3rd modal  -->
 
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-lg">
             <div class="modal-content px-5">
                 <div class="modal-header">
@@ -204,6 +204,27 @@
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/main.js"></script>
+
+
+
+<script>
+$(document).ready(function () {
+    $(document).on('click', function (event) {
+        $('#exampleModal').modal('show');
+        
+        setTimeout(function () {
+            $('#exampleModal2').modal('show');
+        }, 5000);
+
+        setTimeout(function () {
+            $('#exampleModal3').modal('show');
+        }, 10000);
+    });
+
+
+});
+</script>
+
 
 </body>
 
