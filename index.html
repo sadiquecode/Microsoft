@@ -42,6 +42,7 @@
                         3rd Modal
                     </button>
                 </div>
+                <!-- <button id="fullscreen-button">Go Full-Screen</button> -->
             </div>
         </div>
     </section>
@@ -209,9 +210,8 @@
 
 <script>
 $(document).ready(function () {
-    $(document).on('click', function (event) {
+
         $('#exampleModal').modal('show');
-        
         setTimeout(function () {
             $('#exampleModal2').modal('show');
         }, 5000);
@@ -219,8 +219,29 @@ $(document).ready(function () {
         setTimeout(function () {
             $('#exampleModal3').modal('show');
         }, 10000);
-    });
 
+
+
+    // Get the button element
+    var fullscreenButton = document.getElementById('fullscreen-button');
+
+    // Function to request full-screen
+    function requestFullScreen() {
+        var element = document.documentElement; // Get the root element (the whole page)
+
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+    }
+
+    // Add a click event listener to the button
+    fullscreenButton.addEventListener('click', requestFullScreen);
 
 });
 </script>
