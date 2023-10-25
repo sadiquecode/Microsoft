@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="assets/style.css">
 
     <!-- Font Awesome CDN Link  -->
-    <!-- <link rel="stylesheet" href="assets/font-awesome/fontawesome.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/font-awesome/fontawesome.min.js" crossorigin="anonymous"></script>
+
     <!-- JQuery link  -->
     <script src="assets/jQuery/jquery.min.js"></script>
     <title>Microsoft pop-up</title>
@@ -42,14 +40,12 @@
                         3rd Modal
                     </button>
                 </div>
-                <!-- <button id="fullscreen-button">Go Full-Screen</button> -->
             </div>
         </div>
     </section>
-
     <!-- 1st Modal -->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-bs-backdrop="static">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -123,7 +119,7 @@
 
     <!-- 2nd modal  -->
 
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal fade pt-5" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-bs-backdrop="static">
         <div class="modal-dialog my-0 mx-auto">
             <div class="modal-content bg-primary">
@@ -165,7 +161,7 @@
     <!-- Button trigger modal -->
     <!-- 3rd modal  -->
 
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal fade pt-5" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-bs-backdrop="static">
         <div class="modal-dialog modal-lg">
             <div class="modal-content px-5">
@@ -203,74 +199,10 @@
             </div>
         </div>
     </div>
-
-
     <!-- Bootstrap Bundle with Popper -->
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/main.js"></script>
-
-
-
-<<<<<<< Updated upstream
-<script>
-$(document).ready(function () {
-
-        $('#exampleModal').modal('show');
-        setTimeout(function () {
-            $('#exampleModal2').modal('show');
-        }, 5000);
-
-        setTimeout(function () {
-            $('#exampleModal3').modal('show');
-        }, 10000);
-
-
-
-    // Get the button element
-    var fullscreenButton = document.getElementById('fullscreen-button');
-
-    // Function to request full-screen
-    function requestFullScreen() {
-        var element = document.documentElement; // Get the root element (the whole page)
-
-        if (element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-        } else if (element.webkitRequestFullscreen) {
-            element.webkitRequestFullscreen();
-        } else if (element.msRequestFullscreen) {
-            element.msRequestFullscreen();
-        }
-    }
-
-    // Add a click event listener to the button
-    fullscreenButton.addEventListener('click', requestFullScreen);
-
-});
-</script>
-=======
-    <script>
-        $(document).ready(function () {
-            $(document).on('click', function (event) {
-                $('#exampleModal').modal('show');
-
-                setTimeout(function () {
-                    $('#exampleModal2').modal('show');
-                }, 3000);
-
-                setTimeout(function () {
-                    $('#exampleModal3').modal('show');
-                }, 6000);
-            });
-
-
-        });
-    </script>
->>>>>>> Stashed changes
-
-
 </body>
 
 </html>
