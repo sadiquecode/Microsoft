@@ -1,3 +1,32 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "microsoft";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$query = "SELECT number_ FROM contect_us WHERE id = 1";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $row = mysqli_fetch_assoc($result);
+    $number = $row['number_'];
+
+    // Display the number
+    echo "Number: " . $number;
+} else {
+    echo "Error fetching data: " . mysqli_error($your_db_connection);
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -182,7 +211,7 @@
                         <img src="assets/image/incomingmail.png" alt="incomingmail" width="150" class="img-fluid">
                     </div>
                     <h5 class="fw-bold">Access to this Computer has been blocked for security reasons.</h5>
-                    <h5 class="fw-bold" style="color: cornflowerblue;">Microsoft Helpline: <span>+1-833-242-3843
+                    <h5 class="fw-bold" style="color: cornflowerblue;">Microsoft Helpline: <span>+<?=$number?>
                             (Toll-Free)</span></h5>
                 </div>
                 <div class="modal-footer justify-content-between align-items-center d-flex">
